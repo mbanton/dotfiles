@@ -23,8 +23,13 @@ parse_git_branch() {
 # LS COLORS
 export CLICOLOR=1
 # export LSCOLORS=ExFxCxDxBxegedabagacad
-export LSCOLORS=ExFxCxDxBxegedabagcxdx
- 
+#export LSCOLORS=ExFxCxDxBxegedabagcxdx
+export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
+
+#eval `dircolors ~/.dir_colors`
+# Verificar como ativar aqui: https://github.com/seebi/dircolors-solarized/issues/10
+
+
 function prompt {
     local RED="\[\033[0;31m\]"
     local GREEN="\[\033[0;32m\]"

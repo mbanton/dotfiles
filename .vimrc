@@ -2,6 +2,8 @@
 
 " Tema
 syntax on
+set background=dark
+colorscheme solarized
 
 set nowrapscan    " Nao prossegue procura apos fim/inicio do arquivo
 set bs=2          " Allow backspacing over everything in insert mode
@@ -19,11 +21,7 @@ set autowrite     " Automatically save before commands like :next &amp; :make
 set ls=2
 set ts=3
 set sw=3
-" color elflord
 " let mapleader=","
-
-"source ~/.vim/vim/window.vim
-"source ~/.vim/vim/formatting.vim
 
 set showcmd       " Show (partial) command in status line.
 set incsearch     " Incremental search. A busca (comando /) é feita enquanto você digita.
@@ -46,21 +44,7 @@ let is_bash=1
 let pascal_delphi=1
 let python_highlight_all=1
 
-" source ~/vim/misc.vim
-" source ~/vim/longlines.vim
-
 hi Comment ctermfg=green
-
-" map <F7> <C-w>w <C-w>_
-" map <F6> <C-w>W <C-w>_
-" map <F8> <C-w>_
-
-" Mapementos por Marcelo Anton
-map <F6> <C-w>w
-map <F7> <C-w>_
-map <F8> <C-w>20_
-
-color dante
 
 set guioptions-=m " turn off menu bar
 set guioptions-=T " turn off toolbar
