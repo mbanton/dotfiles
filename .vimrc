@@ -1,10 +1,5 @@
 " Marcelo Anton
 
-" Tema
-syntax on
-set background=dark
-colorscheme solarized
-
 set nowrapscan    " Nao prossegue procura apos fim/inicio do arquivo
 set bs=2          " Allow backspacing over everything in insert mode
 "set autoindent    " Always set autoindenting on
@@ -62,4 +57,10 @@ set expandtab " troca a tab por espaço
 set number    " Mostra as linhas
 
 execute pathogen#infect()
+
+
+" Tema
+syntax on
+set background=dark
+colorscheme dante
 
