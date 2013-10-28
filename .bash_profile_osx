@@ -1,7 +1,7 @@
 # Marcelo Anton
 # .bash_profile Mac OS X Mavericks
 
-export PATH=/usr/local/bin:$HOME/bin:$PATH
+export PATH=/usr/local/bin:$HOME/bin:$HOME/.rvm/bin:$PATH
 
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
@@ -67,3 +67,5 @@ export PIP_REQUIRE_VIRTUALENV=true
 # cache pip-installed packages to avoid re-downloading
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
