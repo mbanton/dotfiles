@@ -1,0 +1,44 @@
+# Inicio das alterações em relação ao .bashrc do Linux Mint 16
+
+parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
+function prompt {
+    local RED="\[\033[0;31m\]"
+    local GREEN="\[\033[0;32m\]"
+    local YELLOW="\[\033[0;33m\]"
+    local BLUE="\[\033[0;34m\]"
+    local PURPLE="\[\033[0;35m\]"
+    local CYAN="\[\033[0;36m\]"
+    local GRAY="\[\033[1;30m\]"
+    local BLACK="\[\033[0;30m\]"
+    local LIGHT_GRAY="\[\033[0;37m\]"
+    local WHITE="\[\033[1;37m\]"
+export PS1="${LIGHT_GRAY}\u${LIGHT_GRAY}@${LIGHT_GRAY}\h ${BLUE}\w ${GREEN}\$(parse_git_branch) ${YELLOW}$ \[\e[m\]\[\e[m\]"
+}
+prompt
+
+# Python
+export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2.7
+# Deprecated
+#export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
+export PIP_VIRTUALENV_BASE=$WORKON_HOME
+export PIP_RESPECT_VIRTUALENV=true
+
+# virtualenv should use Distribute instead of legacy setuptools
+export VIRTUALENV_DISTRIBUTE=true
+# pip should only run if there is a virtualenv currently activated
+export PIP_REQUIRE_VIRTUALENV=true
+# cache pip-installed packages to avoid re-downloading
+export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
+
+#alias subl=/opt/sublime2/sublime_text
+
+# RVM
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+# Chef
+export CHEF_USER=marcelo.anton
+
