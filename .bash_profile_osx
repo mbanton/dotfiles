@@ -71,7 +71,7 @@ export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 # Sublime OS X alias
-alias subl="/Applications/Sublime Text 3.app/Contents/SharedSupport/bin/subl"
+alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 
 # Chef
 export CHEF_USER=marcelo.anton
